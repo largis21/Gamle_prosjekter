@@ -1,0 +1,417 @@
+/* 
+############################
+NAVIGATION
+
+MAIN HEADER - 13
+HEADER - 95
+ARTISTS - 196
+INFORMATION - 253
+############################
+
+/* 
+############################
+MAIN HEADER STYLES 
+#############################
+*/
+.main-header {
+    background-color: none;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.755);
+}
+
+.main-header img {
+    height: 100vh;
+    min-width: 100%;
+    display: block;
+}
+
+.main-header-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color3);
+    font-family: eras-bold;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 13px rgba(0,0,0,0.58);
+}
+
+.main-header-text-wrapper {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+.main-header-text h1 {
+    font-size: 140px;
+    margin: 1rem 0;
+}
+
+.main-header-text h2 {
+    font-size: 60px;
+    margin: 1rem 0;
+}
+
+.main-header-text h3 {
+    font-size: 40px;
+    margin: 1rem 0;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .main-header-text h1 {
+        font-size: 50px;
+    }
+
+    .main-header-text h2 {
+        font-size: 36px;
+    }
+    
+    .main-header-text h3 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-header-text h1 {
+        font-size: 32px;
+    }
+
+    .main-header-text h2 {
+        font-size: 20px;
+    }
+    
+    .main-header-text h3 {
+        font-size: 16px;
+    }
+}
+/* 
+############################
+HEADER STYLES 
+#############################
+*/
+.header {
+    background-color: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.755);
+}
+
+.header-image-container img {
+    min-width: 100vw;
+    display: block;
+}
+
+.header-image-container {
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.header-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color3);
+    font-family: eras-bold;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 13px rgba(0,0,0,0.58);
+}
+
+.header-text-wrapper {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 80px;
+    margin: 1rem 0;
+}
+
+.header-text h2 {
+    font-size: 44px;
+    margin: 1rem 0;
+}
+
+.header-text h3 {
+    font-size: 30px;
+    margin: 1rem 0;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .header-text h1 {
+        font-size: 50px;
+    }
+
+    .header-text h2 {
+        font-size: 36px;
+    }
+    
+    .header-text h3 {
+        font-size: 24px;
+    }
+
+    .header-image-container {
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-text {
+        margin-top: 1rem;
+    }
+
+    .header-text h1 {
+        font-size: 32px;
+    }
+
+    .header-text h2 {
+        font-size: 20px;
+    }
+    
+    .header-text h3 {
+        font-size: 16px;
+    }
+
+    .header-image-container {
+        min-width: auto;
+        height: 100%
+    }
+}
+/* 
+############################
+ARTISTS STYLES 
+#############################
+*/
+.artists-row {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.artist-card {
+    margin-top: 5rem;
+    width: 40%;
+    height: fit-content;
+    
+}
+
+.artist-card-box-shadow {
+    max-width: fit-content;
+}
+
+.artist-card-image {
+    position: relative;
+    max-width: fit-content;
+    overflow: hidden;
+    box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.52);
+    border-radius: 2rem;
+    transition: border-radius var(--animation-duration);
+}
+
+.artist-card-image img{
+    width: 100%;
+    display: block;
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.755);
+}
+
+.artist-card-image .artist-overlay {
+    position: absolute;
+    transform: scale(5);
+    transition: transform var(--animation-duration) ease;
+    z-index: 2;
+}
+
+.artist-card-image .artist-image {
+    transform: scale(1.2);
+    transition: transform var(--animation-duration) ease;
+}
+
+.artist-card-image:hover .artist-overlay{
+    transform: scale(1);
+}
+
+.artist-card-image:hover .artist-image{
+    transform: scale(1);
+}
+
+.artist-card-image:hover{
+    border-radius: .5rem;
+}
+
+.artist-card-text {
+    text-align: center;
+    color: var(--color2);
+    max-width: 100%;
+}
+
+.artist-card-text h3{
+    margin-top: 1rem;
+    font-family: eras-bold;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+.artist-card-text h4{
+    font-family: eras-book;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .artists-row {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .artist-card {
+        width: 80%;
+        margin: 2rem auto;
+    }
+}
+/* 
+############################
+INFORMATION STYLES 
+#############################
+*/
+.info-wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.info-container {
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.info-container:nth-child(even) .info-section-2{
+    margin-right: 10rem;
+}
+
+.info-container:nth-child(even) .info-section-1{
+    margin-right: 0rem;
+}
+
+.picture-wrapper {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+}
+
+.picture-wrapper > * {
+    width: 30vw;
+    display: block;
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.755);
+}
+
+.info-section-1 {
+    margin-right: 10rem;
+}
+
+.info-text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+}
+
+.info-text-wrapper {
+    color: white;
+}
+
+.info-text-wrapper h2 {
+    font-family: eras-bold;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.info-text-wrapper p{
+    font-family: eras-book;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+@media only screen and  (max-width: 1024px) {
+    .info-container {
+        flex-direction: column-reverse !important;
+        width: 100%;
+        margin: 3rem auto;
+    }
+
+    .info-section-1, .info-section-2 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .info-text {
+        margin-top: 2rem;
+        word-wrap: break-word;
+    }
+
+    .picture-wrapper > *{
+        width: 100%;
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
+
+
+.content-wrapper img{
+    margin: 1rem;
+    width: 21%;
+}
+
+
+@media only screen and (max-width: 1400px) {   
+    .content-wrapper img{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .content-wrapper img{
+        width: 60%;
+    }
+}
+/* 
+############################
+PRESENTATION STYLES 
+#############################
+*/
+
+.presentation {
+    margin-top: 6rem;
+    width: 100%;
+    height: 60rem;
+}
+
+.presentation iframe {
+    width: 100%;
+} 

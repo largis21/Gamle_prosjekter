@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.input-wrapper {
+    width: fit-content;
+}
+
+.input-wrapper h3 {
+    color: green;
+}
+
+.list-wrapper {
+    background-color: aqua;
+    height: 20rem;
+    width: 40rem;
+    display: table;
+    table-layout: fixed;
+}
+
+.item {
+    display: table-cell;   
+}
+
